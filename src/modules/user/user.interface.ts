@@ -6,5 +6,5 @@ export type UserDocument = HydratedDocument<User>;
 export type LeanUser = Document<UserDocument>;
 
 export interface UserFiles {
-    profilePicture: Express.Multer.File[];
+    profileImage: Express.Multer.File[];
 }

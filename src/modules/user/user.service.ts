@@ -180,12 +180,11 @@ export class UserService {
     const existingUser = await this.getUserById(id);
 
     let profileImageLink = '';
-
-    if (files?.profilePicture) {
-      const { profilePicture } = files;
+    if (files?.profileImage) {
+      const { profileImage } = files;
 
       const { secure_url } = await this.cloudinaryService.uploadImage(
-        profilePicture[0],
+        profileImage[0],
       );
 
       profileImageLink = secure_url;
