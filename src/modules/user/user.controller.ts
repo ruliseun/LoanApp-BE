@@ -14,7 +14,6 @@ export class UserController {
 
     @Post('/create')
     async createMedia(@Body() createUserDto: CreateUserDto){
-        console.log('running createUser')
        try{
         const user = await this.userService.createUser(createUserDto);
         return user;
