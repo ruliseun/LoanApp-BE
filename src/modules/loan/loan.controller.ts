@@ -27,7 +27,7 @@ export class LoanController {
     }
 
     @UseGuards(JwtAuthGuard)
-    @Post('/create')
+    @Post('/')
     async createLoan(@GetUser() user, @Body() createLoanDto: CreateLoanDto){
         try{
             const loan = await this.loanService.createLoan(user, createLoanDto);
